@@ -4,12 +4,12 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
-use App\Models\User;
-use Illuminate\Foundation\Auth\RegistersUsers;
+use App\Models\Doctor;
+use Illuminate\Foundation\Auth\RegistersDoctors;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
-class RegisterController extends Controller
+class RegisterDoctorController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
@@ -55,7 +55,6 @@ class RegisterController extends Controller
             'phone' => ['required', 'string', 'max:10'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'user_type' =>['required','numeric','max:1']
         ]);
     }
 
@@ -63,11 +62,11 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \App\Models\User
+     * @return \App\Models\Doctor
      */
     protected function create(array $data)
     {
-        return User::create([
+        return Doctor::create([
             'first_name' => $data['first_name'],
             'last_name' => $data['last_name'],
             'email' => $data['email'],
@@ -78,6 +77,6 @@ class RegisterController extends Controller
 
     public function showRegistrationForm()
     {
-        return view('auth.new_login');
+        return view('auth.login_doc');
     }
 }

@@ -50,7 +50,7 @@ Route::resource('schedules', App\Http\Controllers\ScheduleController::class);
 Route::get('problem', [App\Http\Controllers\DoctorDashboardController::class, 'problem'])->name('problem');
 Route::get('settings', [App\Http\Controllers\DoctorDashboardController::class, 'settings'])->name('settings');
 Route::get('profile', [App\Http\Controllers\DoctorDashboardController::class, 'profile'])->name('profile');
-Route::get('logout', [App\Http\Controllers\DoctorDashboardController::class, 'index'])->name('logout');
+Route::get('logout', [App\Http\Controllers\DoctorDashboardController::class, 'logOut'])->name('logout');
 }
 );
 

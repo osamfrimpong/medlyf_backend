@@ -18,4 +18,9 @@ class DoctorDashboardController extends Controller
     public function settings(){}
 
     public function problem(){}
+
+    public function logOut(){
+        Auth::logout();
+        return redirect()->route('doctor_login');
+    }
 }

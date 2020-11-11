@@ -37,12 +37,12 @@
         <div class="profile-pic"><img src="" alt="" ></div>
     <p id=" ">Dr. {{auth()->user()->last_name}} {{auth()->user()->first_name}}</p>
         <ul class="list-items">
-            <li  style="background: #00a2ff;"><a href="{{route('doctor.home')}}"><i class="fas fa-user"></i>Clients</a></li>
+            <li><a href="{{route('doctor.home')}}"><i class="fas fa-user"></i>Home</a></li>
         <li><a href="{{route('doctor.schedules.index')}}"><i class="fas fa-stream"></i>Schedule</a></li>
             <li><a href="{{route('doctor.profile')}}"><i class="fas fa-address-book"></i>Profile</a></li>
             <li><a href="{{route('doctor.settings')}}"><i class="fas fa-cog"></i>Settings</a></li>
             <li><a href="{{route('doctor.problem')}}"><i class="fas fa-envelope"></i>Report a problem</a></li>
-            <li><a href="#"><i class="fa fa-sign-out"></i>Logout</a></li>
+            <li><a href="{{route('doctor.logout')}}"><i class="fa fa-sign-out"></i>Logout</a></li>
         </ul>
     </nav>
 </div>

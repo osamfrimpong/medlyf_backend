@@ -31,7 +31,7 @@
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
-  background: #4CAF50;
+  background: #0077ff;
   width: 100%;
   border: 0;
   padding: 15px;
@@ -42,7 +42,7 @@
   cursor: pointer;
 }
 .form button:hover,.form button:active,.form button:focus {
-  background: #43A047;
+  background: #0077ff;
 }
 .form .message {
   margin: 15px 0 0;
@@ -50,7 +50,7 @@
   font-size: 12px;
 }
 .form .message a {
-  color: #4CAF50;
+  color: #00012c;
   text-decoration: none;
 }
 .form .register-form {
@@ -109,12 +109,11 @@ body {
 
 .whichUser .changingUser{
  
-  background:red;
+  background:#00012c;
   color: white;
   border-radius: 5px;
   padding: 5px;
   text-decoration: none;
-  border: 1px solid red;
 }
 
 

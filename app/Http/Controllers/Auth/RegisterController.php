@@ -72,6 +72,7 @@ class RegisterController extends Controller
             'last_name' => $data['last_name'],
             'email' => $data['email'],
             'phone' => $data['phone'],
+            'user_type'=>$data['user_type'],
             'password' => Hash::make($data['password']),
         ]);
     }
@@ -79,5 +80,14 @@ class RegisterController extends Controller
     public function showRegistrationForm()
     {
         return view('auth.new_login');
+    }
+
+    protected function redirectTo(){
+        if(auth()->user()->user_type == 0){
+            return route('patient.home');
+       }
+       elseif (auth()->user()->user_type == 1) {
+           return route('doctor.home');
+       }
     }
 }

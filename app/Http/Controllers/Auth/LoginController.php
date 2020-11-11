@@ -42,4 +42,14 @@ class LoginController extends Controller
     {
         return view('auth.new_login');
     }
+
+    protected function authenticated(Request $request, $user)
+    {
+        if($user->user_type == 0){
+             return redirect()->route('patient.home');
+        }
+        elseif ($user->user_type == 1) {
+            return redirect()->route('doctor.home');
+        } 
+    }
 }

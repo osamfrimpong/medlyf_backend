@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="{{asset('css/style.css')}}" />
-    <link rel="stylesheet" href="{{asset('css/dashboard.css')}}">
+    <link rel="stylesheet" href="{{asset('css/PatientDash.css')}}">
     <link rel="stylesheet" href="{{asset('css/table.css')}}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="{{asset('images/favicon.ico')}}" />
@@ -41,7 +41,7 @@
         <li><a href="{{route('search_doc')}}"><i class="fas fa-user"></i>Book</a></li>
         <li><a href="{{route('patient.updates')}}"><i class="fas fa-stream"></i>Updates</a></li>
         <li><a href="{{route('patient.profile')}}"><i class="fas fa-address-book"></i>Profile</a></li>
-            <li><a href="{{route('patient.settings')}}"><i class="fas fa-cog"></i>Settings</a></li>
+          
             <li><a href="{{route('patient.problem')}}"><i class="fas fa-envelope"></i>Report a problem</a></li>
         <li><a href="{{route('patient.logout')}}"><i class="fa fa-sign-out"></i>Logout</a></li>
     </ul>

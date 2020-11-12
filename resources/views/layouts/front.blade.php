@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="{{asset('css/style.css')}}" />
     <link rel="stylesheet" href="{{asset('css/login.css')}}">
+    <link rel="stylesheet" href="{{asset('css/searchDoc.css')}}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="images/favicon.ico" />
 
@@ -83,5 +84,6 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{{asset('javascript/login.js')}}"></script>
+    <script src="{{asset('javascript/popupmodal.js')}}"></script>
   </body>
 </html>

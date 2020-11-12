@@ -20,7 +20,7 @@
        <!-- TOTAL BOOKING -->
        <div class="booknum" id="">
            <div class="sub-head">All Appointments</div>
-           <p class="nums">100</p>
+           <p class="nums">{{$bookings->count()}}</p>
        </div>
     </div>
 
@@ -39,47 +39,21 @@
            </thead>
            <tbody>
               
-               <tr>
-                   <td class="column1"></td>
-                   <td class="column2">00011</td>
-                   <td class="column3">Eric Tweneboah</td>
-                   <td class="column4">30</td>
-                   <td class="column5">Ho Teaching Hospital</td>
-                   <td class="column6">01/10/2020</td>
-               </tr>
+              @forelse ($bookings as $booking)
+              <tr>
+              <td class="column1">{{$booking->created_at}}</td>
+                <td class="column2">{{$booking->patient->id}}</td>
+                <td class="column3">{{$booking->patient->first_name}} {{$booking->patient->last_name}}</td>
+                <td class="column4">30</td>
+                <td class="column5">{{$booking->schedule->hospital}}</td>
+                <td class="column6">{{$booking->schedule->date}}</td>
+            </tr>
+              @empty
+                  
+              @endforelse
 
-               <tr>
-                   <td class="column1"></td>
-                   <td class="column2">00023</td>
-                   <td class="column3">Emmanuel Ansong</td>
-                   <td class="column4">55</td>
-                   <td class="column5">Akatsi District Hospital</td>
-                   <td class="column6">02/10/2020</td>
-               </tr>
-               <tr>
-                   <td class="column1"></td>
-                   <td class="column2"></td>
-                   <td class="column3"></td>
-                   <td class="column4"></td>
-                   <td class="column5"></td>
-                   <td class="column6"></td>
-               </tr>
-               <tr>
-                   <td class="column1"></td>
-                   <td class="column2"></td>
-                   <td class="column3"></td>
-                   <td class="column4"></td>
-                   <td class="column5"></td>
-                   <td class="column6"></td>
-               </tr>
-               <tr>
-                   <td class="column1"></td>
-                   <td class="column2"></td>
-                   <td class="column3"></td>
-                   <td class="column4"></td>
-                   <td class="column5"></td>
-                   <td class="column6"></td>
-               </tr>
+           
+              
 
        
            </tbody>

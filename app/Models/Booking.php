@@ -18,4 +18,8 @@ class Booking extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function schedule(){
+        return $this->belongsTo(Schedule::class);
+    }
+
 }

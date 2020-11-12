@@ -55,3 +55,15 @@ Route::get('logout', [App\Http\Controllers\DoctorDashboardController::class, 'lo
 );
 
 Route::get('/patient/home', [App\Http\Controllers\PatientDashboardController::class, 'index'])->name('patient.home');
+
+//Pateint routes
+Route::prefix('patient')->middleware('auth')->name('patient.')->group(function(){
+    Route::get('/', [App\Http\Controllers\PatientDashboardController::class, 'index'])->name('home');
+    Route::resource('schedules', App\Http\Controllers\ScheduleController::class);
+    Route::get('problem', [App\Http\Controllers\PatientDashboardController::class, 'problem'])->name('problem');
+    Route::get('updates', [App\Http\Controllers\PatientDashboardController::class, 'updates'])->name('updates');
+    Route::get('profile', [App\Http\ControllersPatientrDashboardController::class, 'profile'])->name('profile');
+    Route::get('logout', [App\Http\Controllers\PatientDashboardController::class, 'logOut'])->name('logout');
+    }
+    );
+    

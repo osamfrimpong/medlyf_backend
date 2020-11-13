@@ -52,6 +52,7 @@ Route::resource('schedules', App\Http\Controllers\ScheduleController::class);
 Route::get('problem', [App\Http\Controllers\DoctorDashboardController::class, 'problem'])->name('problem');
 Route::get('settings', [App\Http\Controllers\DoctorDashboardController::class, 'settings'])->name('settings');
 Route::get('profile', [App\Http\Controllers\DoctorDashboardController::class, 'profile'])->name('profile');
+Route::post('profile/update', [App\Http\Controllers\DoctorDashboardController::class, 'updateProfile'])->name('profile.update');
 Route::get('logout', [App\Http\Controllers\DoctorDashboardController::class, 'logOut'])->name('logout');
 }
 );
@@ -65,7 +66,8 @@ Route::prefix('patient')->middleware('auth')->name('patient.')->group(function()
     Route::resource('schedules', App\Http\Controllers\ScheduleController::class);
     Route::get('problem', [App\Http\Controllers\PatientDashboardController::class, 'problem'])->name('problem');
     Route::get('updates', [App\Http\Controllers\PatientDashboardController::class, 'updates'])->name('updates');
-    Route::get('profile', [App\Http\ControllersPatientrDashboardController::class, 'profile'])->name('profile');
+    Route::get('profile', [App\Http\Controllers\PatientDashboardController::class, 'profile'])->name('profile');
+    Route::post('profile/update', [App\Http\Controllers\PatientDashboardController::class, 'updateProfile'])->name('profile.update');
     Route::get('logout', [App\Http\Controllers\PatientDashboardController::class, 'logOut'])->name('logout');
     }
     );

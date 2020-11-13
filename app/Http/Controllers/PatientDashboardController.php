@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Booking;
 use App\Models\Schedule;
 use Illuminate\Http\Request;
@@ -14,8 +15,24 @@ class PatientDashboardController extends Controller
         return view('patient.home',compact('appointments'));
     }
 
-    public function profile(){}
+    public function profile(){$user = Auth::user();
+        return view('patient.profile',compact('user'));}
 
+
+    public function updateProfile(Request $request){
+        $data = $request->all();
+        if($request->hasFile('picture'))
+        {
+        $data['profile_picture'] = $request->file('picture')->store('public/patients');}
+        else
+        {
+            $data['profile_picture'] = Auth::user()->profile_picture;
+        }
+
+        $user = User::findOrFail(Auth::user()->id);
+        $user->fill($data)->save();
+        return redirect()->route('patient.profile');
+    }
     public function updates(){}
 
     public function problem(){}

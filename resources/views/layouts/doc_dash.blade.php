@@ -41,7 +41,7 @@
         <li><a href="{{route('doctor.schedules.index')}}"><i class="fas fa-stream"></i>Schedule</a></li>
             <li><a href="{{route('doctor.profile')}}"><i class="fas fa-address-book"></i>Profile</a></li>
             <li><a href="{{route('doctor.settings')}}"><i class="fas fa-cog"></i>Settings</a></li>
-            <li><a href="{{route('doctor.problem')}}"><i class="fas fa-envelope"></i>Report a problem</a></li>
+            <li><a href="{{route('doctor.problem.index')}}"><i class="fas fa-envelope"></i>Report a problem</a></li>
             <li><a href="{{route('doctor.logout')}}"><i class="fa fa-sign-out"></i>Logout</a></li>
         </ul>
     </nav>

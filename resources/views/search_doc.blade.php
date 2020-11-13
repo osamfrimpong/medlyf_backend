@@ -57,12 +57,13 @@
              <!-- SEARCH RESULTS -->
          <div class="search-results">
              <!-- THIS IS THE RESULT CONTENT -->
+             @if(isset($results))
              @foreach ($results as $result)
              <div class="result-content" id="">
                 <!-- THE RESULT CONTENT WILL SHOW THE PICTURE OF THE DOCTOR -->
                 <!-- THE PICTURE HE/SHE UPLOADED ON HIS DASHBOARD -->
                 <div class="image" id="">
-                    <img src="" alt="">
+                    <img src="{{$result->doctor->profile_picture == "" ? "" : asset(Storage::url($result->doctor->profile_picture))}}" alt="" height="50" width="50">
                 </div>
    
                 <!-- IT WILL ALSO SHOW DETAILS OF HIS NAME, SPECIALTY, HOSPITAL AND LOCATION -->
@@ -77,7 +78,7 @@
           
            </div>
              @endforeach
-            
+            @endif
             </div>
     
                 

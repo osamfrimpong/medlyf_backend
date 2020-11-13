@@ -34,8 +34,8 @@
     </label>
     <nav id="sidebar">
         <div class="title">DASHBOARD</div>
-        <div class="profile-pic"><img src="" alt="" ></div>
-    <p id=" ">Dr. {{auth()->user()->last_name}} {{auth()->user()->first_name}}</p>
+        <div class="profile-pic"><img src="{{auth()->user()->profile_picture == "" ? "" : asset(Storage::url(auth()->user()->profile_picture))}}" alt="" height="50" width="50"></div>
+    <p id=" ">{{auth()->user()->last_name}} {{auth()->user()->first_name}}</p>
     <ul class="list-items">
         <li><a href="{{route('patient.home')}}"><i class="fas fa-user"></i>Appointments</a></li>
         <li><a href="{{route('search_doc')}}"><i class="fas fa-user"></i>Book</a></li>

@@ -7,6 +7,7 @@ use App\Models\Booking;
 use App\Models\Schedule;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class PatientDashboardController extends Controller
 {
@@ -33,9 +34,32 @@ class PatientDashboardController extends Controller
         $user->fill($data)->save();
         return redirect()->route('patient.profile');
     }
-    public function updates(){}
+    public function settings(){
+        $user = Auth::user();
+        return view('patient.settings',compact('user'));
+    }
 
-    public function problem(){}
+    public function updateSettings(Request $request){
+        $data = $request->all();
+        $user = User::findOrFail(Auth::user()->id);
+        if($request->has('old_password') || $request->has('new_password') || $request->has('new_password_confirm')){
+
+            $request->validate(['new_password' => 'required|string|confirmed']);
+            $request->validate(['old_password' => 'required|string']);
+
+           if(Hash::check($request->old_password,$user->password))
+           {
+            $data['password'] = Hash::make($request->new_password);
+           }
+           
+        }
+
+        
+        $user->update($data);
+        return redirect()->route('patient.settings');
+    }
+
+    
 
     public function logOut(){
         Auth::logout();

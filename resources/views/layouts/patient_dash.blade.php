@@ -39,7 +39,7 @@
     <ul class="list-items">
         <li><a href="{{route('patient.home')}}"><i class="fas fa-user"></i>Appointments</a></li>
         <li><a href="{{route('search_doc')}}"><i class="fas fa-user"></i>Book</a></li>
-        <li><a href="{{route('patient.updates')}}"><i class="fas fa-stream"></i>Updates</a></li>
+        <li><a href="{{route('patient.settings')}}"><i class="fas fa-stream"></i>Settings</a></li>
         <li><a href="{{route('patient.profile')}}"><i class="fas fa-address-book"></i>Profile</a></li>
           
             <li><a href="{{route('patient.problem.index')}}"><i class="fas fa-envelope"></i>Report a problem</a></li>

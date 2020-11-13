@@ -28,24 +28,23 @@
                 </select>
     
                 <select class="specialists" style="margin-top: 5px;" name="region" required>
-                    <option value="" name="Cardiologist" >Select Region</option>
+                    <option value="" name="Cardiologist">Select Region</option>
                     <option value="ahafo" name="Cardiologist">Ahafo Region</option>
-                    <option value="" name="Cardiologist">Ashanti Region</option>
-                    <option value="" name="Cardiologist">Bono Region</option>
-                    <option value="" name="Cardiologist">Bono East</option>
-                    <option value="" name="Cardiologist">CentralRegion</option>
-                    <option value="" name="Cardiologist">Eastern Region</option>
-                    <option value="" name="Cardiologist">Greater Accra</option>
-                    <option value="" name="Cardiologist">Northern</option>
-                    <option value="" name="Cardiologist">North East</option>
-                    <option value="" name="Cardiologist">Oti Region</option>
-                    <option value="" name="Cardiologist">Savannah Region</option>
-                    <option value="" name="Cardiologist">Upper East</option>
-                    <option value="" name="Cardiologist">Upper West</option>
-                    <option value="" name="Cardiologist">Volta Region</option>
-                    <option value="" name="Cardiologist">Western Region</option>
-                    <option value="" name="Cardiologist">Western North</option>
-    
+                    <option value="ashanti" name="Cardiologist">Ashanti Region</option>
+                    <option value="bono" name="Cardiologist">Bono Region</option>
+                    <option value="bono-east" name="Cardiologist">Bono East</option>
+                    <option value="central" name="Cardiologist">CentralRegion</option>
+                    <option value="eastern" name="Cardiologist">Eastern Region</option>
+                    <option value="accra" name="Cardiologist">Greater Accra</option>
+                    <option value="nothern" name="Cardiologist">Northern</option>
+                    <option value="north-east" name="Cardiologist">North East</option>
+                    <option value="oti" name="Cardiologist">Oti Region</option>
+                    <option value="savannah" name="Cardiologist">Savannah Region</option>
+                    <option value="upper-east" name="Cardiologist">Upper East</option>
+                    <option value="upper-west" name="Cardiologist">Upper West</option>
+                    <option value="volta" name="Cardiologist">Volta Region</option>
+                    <option value="western" name="Cardiologist">Western Region</option>
+                    <option value="west-north" name="Cardiologist">Western North</option>
                 </select>
     
                 <button class="specialists" type="submit" style="margin-top: 10px; background: #01395a; color: white; font-size: 20px;">Search</button>

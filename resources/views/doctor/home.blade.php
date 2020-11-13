@@ -8,13 +8,13 @@
        <!-- TODAY BOOKING -->
        <div class="booknum" id="">
            <div class="sub-head">Today's Appointments</div>
-           <p class="nums">15</p>
+           <p class="nums">{{$today->count()}}</p>
        </div>
 
        <!-- UPCOMING BOOKING -->
        <div class="booknum" id="">
            <div class="sub-head">Upcoming Appointments</div>
-           <p class="nums">23</p>
+           <p class="nums">{{$upcoming->count()}}</p>
        </div>
 
        <!-- TOTAL BOOKING -->
@@ -32,7 +32,7 @@
                    <th class="column1">Date</th>
                    <th class="column2">Client ID</th>
                    <th class="column3">Name</th>
-                   <th class="column4">Age</th>
+                   {{-- <th class="column4">Age</th> --}}
                    <th class="column5">Hospital</th>
                    <th class="column6">Appt. Date</th>
                </tr>
@@ -44,9 +44,9 @@
               <td class="column1">{{$booking->created_at}}</td>
                 <td class="column2">{{$booking->patient->id}}</td>
                 <td class="column3">{{$booking->patient->first_name}} {{$booking->patient->last_name}}</td>
-                <td class="column4">30</td>
+                {{-- <td class="column4">30</td> --}}
                 <td class="column5">{{$booking->schedule->hospital}}</td>
-                <td class="column6">{{$booking->schedule->date}}</td>
+                <td class="column6">{{$booking->date}}</td>
             </tr>
               @empty
                   

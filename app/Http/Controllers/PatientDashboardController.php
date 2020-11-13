@@ -68,7 +68,7 @@ class PatientDashboardController extends Controller
 
     public function book($schedule_id){
         $schedule = Schedule::findOrFail($schedule_id);
-        Booking::create(['schedule_id'=>$schedule_id,'patient_id'=>Auth::user()->id,'seen'=>0,'doctor_id'=>$schedule->doctor_id]);
+        Booking::create(['schedule_id'=>$schedule_id,'patient_id'=>Auth::user()->id,'seen'=>0,'doctor_id'=>$schedule->doctor_id,'date'=>$schedule->date]);
         return redirect()->route('patient.home');
 
     }

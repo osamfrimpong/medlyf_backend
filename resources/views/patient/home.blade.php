@@ -26,7 +26,7 @@
                 <td class="column3">{{$appointment->schedule->hospital}}</td>
                 <td class="column4">{{$appointment->schedule->location}}</td>
                 <td class="column5">{{$appointment->schedule->specialty}}</td>
-                <td class="column6">{{$appointment->schedule->date}}</td>
+                <td class="column6">{{$appointment->date}}</td>
             </tr>
               @empty
                   <td colspan="6">No appointments</td>

@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Booking extends Model
 {
     use HasFactory;
-    protected $fillable = ['schedule_id','patient_id','seen','doctor_id'];
+    protected $fillable = ['schedule_id','patient_id','seen','doctor_id','date'];
 
     public function patient(){
         return $this->belongsTo(User::class);

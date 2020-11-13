@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Models\User;
 use App\Models\Booking;
 use App\Models\Schedule;
@@ -14,7 +15,10 @@ class DoctorDashboardController extends Controller
     public function index(){
         $schedules = Schedule::where('doctor_id',Auth::user()->id)->get();
         $bookings = Booking::where('doctor_id',Auth::user()->id)->get();
-        return view('doctor.home',compact('schedules','bookings'));
+        $upcoming = Booking::where('doctor_id',Auth::user()->id)->where('date','>=',Carbon::now())->get();
+        $today = Booking::where('doctor_id',Auth::user()->id)->where('date',Carbon::today())->get();
+        
+        return view('doctor.home',compact('schedules','bookings','upcoming','today'));
     }
 
     public function profile(){

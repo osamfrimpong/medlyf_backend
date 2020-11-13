@@ -42,7 +42,7 @@
         <li><a href="{{route('patient.updates')}}"><i class="fas fa-stream"></i>Updates</a></li>
         <li><a href="{{route('patient.profile')}}"><i class="fas fa-address-book"></i>Profile</a></li>
           
-            <li><a href="{{route('patient.problem')}}"><i class="fas fa-envelope"></i>Report a problem</a></li>
+            <li><a href="{{route('patient.problem.index')}}"><i class="fas fa-envelope"></i>Report a problem</a></li>
         <li><a href="{{route('patient.logout')}}"><i class="fa fa-sign-out"></i>Logout</a></li>
     </ul>
     </nav>

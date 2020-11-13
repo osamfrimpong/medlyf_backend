@@ -49,7 +49,7 @@ Route::get('/doctor/{doctor_id}/details', [App\Http\Controllers\HomeController::
 Route::prefix('doctor')->middleware('auth')->name('doctor.')->group(function(){
 Route::get('/', [App\Http\Controllers\DoctorDashboardController::class, 'index'])->name('home');
 Route::resource('schedules', App\Http\Controllers\ScheduleController::class);
-Route::get('problem', [App\Http\Controllers\DoctorDashboardController::class, 'problem'])->name('problem');
+Route::resource('problem', App\Http\Controllers\ProblemController::class);
 Route::get('settings', [App\Http\Controllers\DoctorDashboardController::class, 'settings'])->name('settings');
 Route::get('profile', [App\Http\Controllers\DoctorDashboardController::class, 'profile'])->name('profile');
 Route::post('profile/update', [App\Http\Controllers\DoctorDashboardController::class, 'updateProfile'])->name('profile.update');
@@ -63,8 +63,9 @@ Route::get('logout', [App\Http\Controllers\DoctorDashboardController::class, 'lo
 Route::prefix('patient')->middleware('auth')->name('patient.')->group(function(){
     Route::get('/', [App\Http\Controllers\PatientDashboardController::class, 'index'])->name('home');
     Route::get('appointment/{schedule_id}/book',[App\Http\Controllers\PatientDashboardController::class, 'book'])->name('book');
+    
+    Route::resource('problem', App\Http\Controllers\ProblemController::class);
     Route::resource('schedules', App\Http\Controllers\ScheduleController::class);
-    Route::get('problem', [App\Http\Controllers\PatientDashboardController::class, 'problem'])->name('problem');
     Route::get('updates', [App\Http\Controllers\PatientDashboardController::class, 'updates'])->name('updates');
     Route::get('profile', [App\Http\Controllers\PatientDashboardController::class, 'profile'])->name('profile');
     Route::post('profile/update', [App\Http\Controllers\PatientDashboardController::class, 'updateProfile'])->name('profile.update');

@@ -16,7 +16,6 @@
                 <form method="POST" action="{{route('doctor.search')}}">
                     @csrf
                 <select class="specialists" name="specialty" required>
-                    <!-- <input type="radio" name="" id="">Heart</input> -->
                     <option value="" name="Heart">Select Specialty</option>
                     <option value="heart" name="Heart">Heart</option>
                     <option value="" name="Teeth">Teeth</option>
@@ -73,7 +72,7 @@
                 </div>
    
                 <!-- THIS BUTTON SHOULD SEND THE BOOKING TO THE PATIENTS DASHBOARD AND DOCTORS DASHBOARD -->
-            <a href="{{route('doctor.details',$result->doctor_id)}}">Details</a>
+            <a class="book" href="{{route('doctor.details',$result->doctor_id)}}">Details</a>
           
            </div>
              @endforeach

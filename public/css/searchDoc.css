@@ -76,13 +76,12 @@
 .result-content .image{
     width: 50px;
     height: 50px;
-    border: 1px solid;
-    border-radius: 50%;
+    border: 3px solid;
     margin: auto;
 }
 
 .result-details{
-    margin: auto;
+    margin: 20px auto;
     height: auto;
     width: auto;
 }
@@ -91,16 +90,13 @@
   text-align: center;
   font-weight: bold;
     width: auto;
-    height: 30px;
-    background-color: #01395a ;
+    height: 20px;
+    background-color: #01395a;
     color: white;
     border-radius: 5px;
     margin: auto;
-    padding: 1%;
+    padding: 0;
 }
-
-
-
 
 /* POPUP MODAL BOX */
 
@@ -155,9 +151,9 @@ table {
   border-collapse: collapse;
   background: white;
   border-radius: 10px;
-  /* overflow: hidden; */
+  overflow: hidden;
   width: 100%;
-  margin: 0 auto;
+  margin: 50px auto;
   /* position: relative; */
   /* z-index: -9; */
 }

@@ -53,4 +53,9 @@ class LoginController extends Controller
             return redirect()->route('doctor.home');
         } 
     }
+
+    public function username()
+    {
+        return 'phone';
+    }
 }

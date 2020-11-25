@@ -16,14 +16,14 @@
                 <form method="POST" action="{{route('doctor.search')}}">
                     @csrf
                 <select class="specialists" name="specialty" required>
-                    <option value="" name="Heart">Select Specialty</option>
+                    <option value="" name="">Select Specialty</option>
                     <option value="heart" name="Heart">Heart</option>
-                    <option value="" name="Teeth">Teeth</option>
-                    <option value="" name="Eye">Eye</option>
-                    <option value="" name="Bones">Bones</option>
-                    <option value="" name="Gynecologist">Gynecologist</option>
-                    <option value="" name="Children">Children</option>
-                    <option value="" name="Kidney">Kidney</option>
+                    <option value="teeth" name="Teeth">Teeth</option>
+                    <option value="eye" name="Eye">Eye</option>
+                    <option value="bones" name="Bones">Bones</option>
+                    <option value="gyne" name="Gynecologist">Gynecologist</option>
+                    <option value="children" name="Children">Children</option>
+                    <option value="kidney" name="Kidney">Kidney</option>
                 </select>
     
                 <select class="specialists" style="margin-top: 5px;" name="region" required>

@@ -41,7 +41,7 @@ class LoginController extends Controller
 
     public function showLoginForm()
     {
-        return view('auth.login');
+        return view('auth.new_login');
     }
 
     protected function authenticated(Request $request, $user)
@@ -52,5 +52,10 @@ class LoginController extends Controller
         elseif ($user->user_type == 1) {
             return redirect()->route('doctor.home');
         } 
+    }
+
+    public function username()
+    {
+        return 'phone';
     }
 }

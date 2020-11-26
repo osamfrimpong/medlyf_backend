@@ -14,7 +14,7 @@
 <body>
     <!-- NAVIGATION BAR -->
 <div class="navbar">
-    <a href="index.html"> <img src="{{asset('images/logo.png')}}" alt="medlyf logo" class="logo" /></a>
+    <a href="{{route('index')}}"> <img src="{{asset('images/logo.png')}}" alt="medlyf logo" class="logo" /></a>
     <label for="toggle" class="hamburger">&#9776;</label>
     <input type="checkbox" id="toggle" />
 

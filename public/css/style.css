@@ -406,9 +406,14 @@ color: skyblue;
   grid-gap: 1vw;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-auto-rows: 250px;
-  background: orangered;
   padding: 0% 15%;
   color: white;
+}
+
+.howhead{
+  background: #00b7ff;
+  height: 30px;
+  padding: 1%;
 }
 
 .headings{

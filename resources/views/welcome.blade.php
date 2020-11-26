@@ -21,7 +21,7 @@
     
         <!-- BOXES -->
     <div class="containers">
-        <div class="box1"><a href="searchDoc.html" class="gridlink"> Click to Book Now</a></div>
+        <div class="box1"><a href="{{route('search_doc')}}" class="gridlink"> Click to Book Now</a></div>
         <div class="box2"><a href="#" class="gridlink">Find Nearest Pharmacy</a></div>
         <div class="box3"><a href="#" class="gridlink">Find Nearest Laboratory</a></div>
     

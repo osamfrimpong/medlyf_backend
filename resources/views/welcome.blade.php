@@ -4,7 +4,7 @@
     
 <div class="banner">
     <p class="fronttext">Search
-        <span style="font-weight: bold; font-size: 3rem; color: #000064"> Doctor </span>, Book a
+        <span style="font-weight: bold; font-size: 3rem; color: #000064"> Doctor</span>, Book a
         <span style="font-weight: bold; font-size: 3rem; color: rgb(0, 0, 100)">Specialist</span>
     </p>
     <p style="font-size: 2rem; text-align: center">
@@ -14,8 +14,8 @@
 
     <!-- INPUT FIELD -->
     <div style="text-align: center;">
-            <input type="text" class="loc" placeholder="&#xf041; Enter location">
-            <input type="text" class="search" placeholder="&#xf002; Search for Specialist, Pharmacy or lab.">
+            <input type="text" class="loc" placeholder=" Enter location">
+            <input type="text" class="search" placeholder="Search for Specialist, Pharmacy or lab.">
             <input type="button" class="submit" value="GO">
     </div>
     

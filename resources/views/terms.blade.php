@@ -1,8 +1,8 @@
-@extends('layouts.front')
+@extends('layouts.frontTopOnly')
 
-@section('contents')
+<!-- @section('contents') -->
 <header class="headings">
-    <h1>TERMS AND CONDITIONS</h1>
+    <p>TERMS AND CONDITIONS</p>
 </header>
 
 <section>
@@ -12,4 +12,4 @@
     </div>
 
 </section>
-@endsection
+<!-- @endsection -->

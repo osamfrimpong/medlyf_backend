@@ -1,6 +1,6 @@
-@extends('layouts.front')
+@extends('layouts.frontTopOnly')
 
-@section('contents')
+<!-- @section('contents') -->
 <div class="scedule-table">
     <table>
         <thead>
@@ -32,4 +32,4 @@
         </tbody>
     </table>
 </div>
-@endsection
+<!-- @endsection -->

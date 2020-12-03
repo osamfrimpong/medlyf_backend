@@ -1,6 +1,6 @@
-@extends('layouts.front')
+@extends('layouts.frontTopOnly')
 
-@section('contents')
+<!-- @section('contents') -->
 <header class="headings">
     <p>SEARCH DOCTOR</p>
 </header>
@@ -46,7 +46,7 @@
                     <option value="west-north" name="Cardiologist">Western North</option>
                 </select>
     
-                <button class="specialists" type="submit" style="margin-top: 10px; background: #01395a; color: white; font-size: 20px;">Search</button>
+                <button class="specialists1" type="submit" >Search</button>
             </form>
             </div>
             
@@ -66,8 +66,8 @@
    
                 <!-- IT WILL ALSO SHOW DETAILS OF HIS NAME, SPECIALTY, HOSPITAL AND LOCATION -->
                 <div class="result-details">
-                    <h4 id="">Dr. {{$result->doctor->last_name}} ({{$result->doctor_count}})</h4>
-                    <h5>{{ucwords($result->specialty)}}</h5>
+                    <h4 id="">Dr. {{$result->doctor->last_name}} {{$result->doctor->first_name}} ({{$result->doctor_count}})</h4>
+                    <h5>{{ucwords($result->specialty)}} specialist</h5>
                    
                 </div>
    
@@ -84,4 +84,4 @@
     
     </div>
 
-@endsection
+<!-- @endsection -->

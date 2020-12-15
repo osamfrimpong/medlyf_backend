@@ -8,19 +8,19 @@
             <!-- TODAY BOOKING -->
             <div class="booknum" id="">
                 <div class="sub-head">Total Doctors</div>
-                <p class="nums">15</p>
+                <p class="nums">{{$totalDoctors}}</p>
             </div>
 
             <!-- UPCOMING BOOKING -->
             <div class="booknum" id="">
                 <div class="sub-head">Total Patients</div>
-                <p class="nums">23</p>
+                <p class="nums">{{$totalPatients}}</p>
             </div>
 
             <!-- TOTAL BOOKING -->
             <div class="booknum" id="">
                 <div class="sub-head">All Appointments</div>
-                <p class="nums">100</p>
+                <p class="nums">{{$totalAppointments}}</p>
             </div>
      </div>
 

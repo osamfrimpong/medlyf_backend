@@ -2,12 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use App\Models\Booking;
 use Illuminate\Http\Request;
 
 class AdminDashboardController extends Controller
 {
     public function index(){
-        return view('admin.home');
+        $totalDoctors = User::where('user_type',1)->get()->count();
+        $totalPatients = User::where('user_type',0)->get()->count();
+        $totalAppointments = Booking::all()->count();
+        return view('admin.home', compact('totalDoctors','totalPatients','totalAppointments'));
     }
 
     public function doctors(){

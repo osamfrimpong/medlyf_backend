@@ -85,3 +85,13 @@ Route::prefix('admin')->name('admin.')->group(function(){
     Route::post('register', [App\Http\Controllers\Auth\Admin\RegisterController::class,'register'])->name('register');
     
     });
+
+    Route::prefix('admin')->middleware('auth:admin')->name('admin.')->group(function(){
+        Route::get('/home', [App\Http\Controllers\AdminDashboardController::class, 'index'])->name('home');
+        Route::get('/doctors', [App\Http\Controllers\AdminDashboardController::class, 'doctors'])->name('doctors');
+        Route::get('/appoints', [App\Http\Controllers\AdminDashboardController::class, 'appoints'])->name('appoints');
+        Route::get('/settings', [App\Http\Controllers\AdminDashboardController::class, 'settings'])->name('settings');
+        Route::get('/patients', [App\Http\Controllers\AdminDashboardController::class, 'patients'])->name('patients');
+        
+        }
+        );

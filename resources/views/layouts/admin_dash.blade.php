@@ -36,15 +36,15 @@
         <nav id="sidebar">
             <div class="title">ADMINISTRATOR</div>
             <div class="profile-pic"><img src="{{auth()->user()->profile_picture == "" ? "" : asset(Storage::url(auth()->user()->profile_picture))}}" alt="" height="70" width="70"></div>
-            <h4 id="">{{auth()->user()->last_name}} {{auth()->user()->first_name}}</h4>
+            <h4 id="">{{auth()->user()->name}}</h4>
 
             <ul class="list-items">
-                <li style="background: #f97efd;"><a href="{{route('administrator.home')}}"><i class="fas fa-user"></i>Home</a></li>
-                <li><a href="{{route('administrator.doctors')}}"><i class="fas fa-stream"></i>Doctors</a></li>
-                <li><a href="{{route('administrator.patients')}}"><i class="fas fa-address-book"></i>Patients</a></li>
-                <li><a href="{{route('administrator.appoints')}}"><i class="fas fa-address-book"></i>Appointments</a></li>
-                <li><a href="{{route('administrator.settings')}}"><i class="fas fa-cog"></i>Settings</a></li>
-                <li><a href="{{route('administrator.logout')}}"><i class="fa fa-sign-out"></i>Logout</a></li>
+                <li style="background: #f97efd;"><a href="{{route('admin.home')}}"><i class="fas fa-user"></i>Home</a></li>
+                <li><a href="{{route('admin.doctors')}}"><i class="fas fa-stream"></i>Doctors</a></li>
+                <li><a href="{{route('admin.patients')}}"><i class="fas fa-address-book"></i>Patients</a></li>
+                <li><a href="{{route('admin.appoints')}}"><i class="fas fa-address-book"></i>Appointments</a></li>
+                <li><a href="{{route('admin.settings')}}"><i class="fas fa-cog"></i>Settings</a></li>
+                <li><a href="{{route('admin.logout')}}"><i class="fa fa-sign-out"></i>Logout</a></li>
 
             </ul>
         </nav>

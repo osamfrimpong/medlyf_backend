@@ -75,3 +75,13 @@ Route::prefix('patient')->middleware('auth')->name('patient.')->group(function()
     }
     );
     
+     /****Admin Auth Routes*****/
+Route::prefix('admin')->name('admin.')->group(function(){
+    Route::get('login', [App\Http\Controllers\Auth\Admin\LoginController::class, 'showLoginForm'])->name('login');
+    Route::post('login', [App\Http\Controllers\Auth\Admin\LoginController::class,'login'])->name('login');
+    Route::get('logout', [App\Http\Controllers\Auth\Admin\LoginController::class,'logout'])->name('logout');
+    
+    Route::get('register', [App\Http\Controllers\Auth\Admin\RegisterController::class,'showRegistrationForm'])->name('register');
+    Route::post('register', [App\Http\Controllers\Auth\Admin\RegisterController::class,'register'])->name('register');
+    
+    });

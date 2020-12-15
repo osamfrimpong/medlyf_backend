@@ -2,14 +2,14 @@
 @section('contents')
 
   <!-- DASHBOARD CONTENT -->
-  <div class="content">
+  {{-- <div class="content"> --}}
 
-<form class="searching" action="">
+{{-- <form class="searching" action="">
     <input class="input-search1" type="text" placeholder="Type patient's name">
     <input class="input-button" type="button" value="search">
     <!-- <input class="input-btn" type="button" value=""> -->
-</form>
-<div class="search-head">Search results</div>
+</form> --}}
+{{-- <div class="search-head">Search results</div>
 <div class="search-outcome">
     <table>
         <thead>
@@ -36,10 +36,10 @@
 
         </tbody>
     </table>
-</div>
-</div>
+</div> --}}
+{{-- </div> --}}
 
-<div class="content1">
+<div class="content">
 <div class="clients">
     <div class="head2">Clients</div>
     <table>
@@ -55,49 +55,22 @@
         </thead>
         <tbody>
 
+            @forelse ($patients as $patient)
             <tr>
                 <td class="column1"></td>
-                <td class="column2">0241773287</td>
-                <td class="column3">Eric Tweneboah</td>
-                <td class="column4">30</td>
+                <td class="column2">{{$patient->phone}}</td>
+                <td class="column3">{{$patient->first_name}} {{$patient->last_name}}</td>
+                <td class="column4">{{$patient->age}}</td>
                 <td class="column5"><button id="" class="book-now1">View Dashboard</button></td>
                 <td class="column6"><button id="" class="book-now2">Delete</button></td>
             </tr>
-
+            @empty
             <tr>
-                <td class="column1"></td>
-                <td class="column2">0542345323</td>
-                <td class="column3">Emmanuel Ansong</td>
-                <td class="column4">55</td>
-                <td class="column5"><button id="" class="book-now1">View Dashboard</button></td>
-                <td class="column6"><button id="" class="book-now2">Delete</button></td>
+                <td colspan="6"> No patients</td>
+                
             </tr>
-            <tr>
-                <td class="column1"></td>
-                <td class="column2"></td>
-                <td class="column3"></td>
-                <td class="column4"></td>
-                <td class="column5"></td>
-                <td class="column6"></td>
-            </tr>
-            <tr>
-                <td class="column1"></td>
-                <td class="column2"></td>
-                <td class="column3"></td>
-                <td class="column4"></td>
-                <td class="column5"></td>
-                <td class="column6"></td>
-            </tr>
-            <tr>
-                <td class="column1"></td>
-                <td class="column2"></td>
-                <td class="column3"></td>
-                <td class="column4"></td>
-                <td class="column5"></td>
-                <td class="column6"></td>
-            </tr>
-
-
+            @endforelse
+            
         </tbody>
     </table>
 </div>

@@ -24,7 +24,8 @@ class AdminDashboardController extends Controller
     }
 
     public function patients(){
-        return view('admin.patients');
+        $patients = User::where('user_type',0)->get();
+        return view('admin.patients',compact('patients'));
     }
 
     public function settings(){
